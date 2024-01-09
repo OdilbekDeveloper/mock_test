@@ -108,10 +108,12 @@ WSGI_APPLICATION = 'mock_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'postgresql://gen_user:King%23%2311@109.172.90.230:5432/default_db',
         'NAME': 'mock_test',
-        'USER': 'admin',
-        'PASSWORD': '1',
+        'USER': 'desmon',
+        'PASSWORD': 'King##11',
+        'HOST': 'ieltsplus.uz',
+        'PORT': '5432',
     }
 }
 
@@ -164,12 +166,12 @@ AUTH_USER_MODEL = 'main.User'
 
 
 
-CSRF_TRUSTED_ORIGINS = ['https://ed69-89-236-226-231.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://76d4-89-236-226-231.ngrok-free.app']
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = None
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
-CORS_ALLOWED_ORIGINS = ['https://cbb9-95-214-211-179.ngrok-free.app']
+CORS_ALLOWED_ORIGINS = ['https://76d4-89-236-226-231.ngrok-free.app']
 CORS_ALLOW_ALL_ORIGINS = True
 
 

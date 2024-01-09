@@ -389,7 +389,7 @@ def CheckAllAnswers(request):
     listening_sections = []
     if len(l_answers) > 0 and len(r_answers) > 0:
         for answer in l_answers:
-            if answer.user_answer == answer.question.right_answer and l_correct <= 40:
+            if answer.user_answer.lower() == answer.question.right_answer.lower() or answer.user_answer.lower() == answer.question.right_answer2.lower() or answer.user_answer.lower() == answer.question.right_answer3.lower() or answer.user_answer.lower() == answer.question.right_answer3.lower() or answer.user_answer.lower() == answer.question.right_answer4.lower() or answer.user_answer.lower() == answer.question.right_answer5.lower() and l_correct <= 40:
                 l_correct += 1
                 answer.is_checked = True
                 answer.save()
@@ -694,7 +694,7 @@ def CheckAllAnswers(request):
         r_correct = 0
         reading_sections = []
         for answer in r_answers:
-            if answer.user_answer == answer.question.right_answer and r_correct <= 40:
+            if answer.user_answer.lower() == answer.question.right_answer.lower() or answer.user_answer.lower() == answer.question.right_answer2.lower() or answer.user_answer.lower() == answer.question.right_answer3.lower() or answer.user_answer.lower() == answer.question.right_answer3.lower() or answer.user_answer.lower() == answer.question.right_answer4.lower() or answer.user_answer.lower() == answer.question.right_answer5.lower() and l_correct <= 40:
                 r_correct += 1
                 answer.is_checked = True
                 answer.save()
