@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'mock_test',
         'USER': 'desmon',
         'PASSWORD': 'King##11',
-        'HOST': 'ieltsplus.uz',
+        'HOST': '109.172.89.216',
         'PORT': '5432',
     }
 }
