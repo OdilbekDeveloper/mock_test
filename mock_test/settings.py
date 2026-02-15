@@ -106,14 +106,22 @@ WSGI_APPLICATION = 'mock_test.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'postgresql://gen_user:King%23%2311@109.172.90.230:5432/default_db',
+#         'NAME': 'mock_test',
+#         'USER': 'desmon',
+#         'PASSWORD': 'King##11',
+#         'HOST': '109.172.89.216',
+#         'PORT': '5432',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'postgresql://gen_user:King%23%2311@109.172.90.230:5432/default_db',
-        'NAME': 'mock_test',
-        'USER': 'desmon',
-        'PASSWORD': 'King##11',
-        'HOST': '109.172.89.216',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -166,12 +174,12 @@ AUTH_USER_MODEL = 'main.User'
 
 
 
-CSRF_TRUSTED_ORIGINS = ['https://76d4-89-236-226-231.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://a897-182-227-130-12.ngrok-free.app']
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = None
 DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
-CORS_ALLOWED_ORIGINS = ['https://76d4-89-236-226-231.ngrok-free.app']
+CORS_ALLOWED_ORIGINS = ['https://a897-182-227-130-12.ngrok-free.app']
 CORS_ALLOW_ALL_ORIGINS = True
 
 
