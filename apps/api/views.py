@@ -988,3 +988,34 @@ def Add_refferal(request, pk):
     return Response(ser.data, status=200)
 
 
+
+
+@api_view(['GET'])
+def Ping(request):
+    return Response({"status": "ok", "message": "django alive"})
+
+
+
+@api_view(['POST'])
+def TG_Create_User(request):
+    telegram_id = request.data.get("telegram_id")
+    first_name = request.data.get("first_name", "")
+    last_name = request.data.get("last_name", "")
+
+    if not telegram_id:
+        return Response({"error": "telegram_id required"}, status=400)
+
+    user, created = User.objects.get_or_create(
+        telegram_id=telegram_id,
+        defaults={
+            "username": f"tg_{telegram_id}",
+            "first_name": first_name,
+            "last_name": last_name,
+        }
+    )
+
+    return Response({
+        "created": created,
+        "user_id": user.id,
+        "balance": user.balance
+    })

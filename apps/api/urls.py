@@ -35,4 +35,7 @@ urlpatterns = [
     # path('payments/generate/link/', Generate_Pay_Link),
     # path('payments/generate/link/2/', Generate_Pay_Link),
     # path("payments/", include("payme.urls"))
+
+    path("ping/", Ping),
+    path("tg-user/", TG_Create_User)
 ]
